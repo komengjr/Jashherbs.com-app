@@ -14,7 +14,13 @@ class CreateTblBlogTable extends Migration
     public function up()
     {
         Schema::create('tbl_blog', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_blog');
+            $table->string('kd_blog')->unique();
+            $table->string('judul_blog');
+            $table->string('cat_blog');
+            $table->longtext('deskripsi');
+            $table->longtext('file');
+            $table->string('status_blog');
             $table->timestamps();
         });
     }
