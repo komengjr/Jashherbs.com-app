@@ -19,4 +19,9 @@ Route::get('/blog',[App\Http\Controllers\PublicController::class, 'blog']);
 Route::get('/contact',[App\Http\Controllers\PublicController::class, 'contact']);
 Auth::routes();
 Auth::routes(['register' => false]);
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/postinganbarang/tambah', [App\Http\Controllers\HomeController::class, 'tambahbarang']);
+Route::get('/postinganbarang/lihatdata/{id}', [App\Http\Controllers\HomeController::class, 'lihatdata']);
+Route::post('/postinganbarang/posttambah', [App\Http\Controllers\HomeController::class, 'posttambahbarang']);

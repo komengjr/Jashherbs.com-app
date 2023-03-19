@@ -17,7 +17,7 @@ class CreateTblBlogTable extends Migration
             $table->id('id_blog');
             $table->string('kd_blog')->unique();
             $table->string('judul_blog');
-            $table->string('cat_blog');
+            $table->string('kd_cat')->index();
             $table->longtext('deskripsi');
             $table->longtext('file');
             $table->string('status_blog');

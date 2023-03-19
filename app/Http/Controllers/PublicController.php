@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class PublicController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $cat = DB::table('tbl_cat')->where('status_cat',1)->get();
+        $postinganbarang = DB::table('tbl_item')->get();
+        return view('index',['cat'=>$cat, 'postinganbarang'=>$postinganbarang]);
     }
     public function listproduct()
     {
