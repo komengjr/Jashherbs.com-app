@@ -56,4 +56,11 @@ class HomeController extends Controller
         
         return view('admin.postingbarang.showdata',['data'=>$cekdata]);
     }
+    public function editdatabarang($id)
+    {
+        
+        $cekdata = DB::table('tbl_item')->where('kd_item',$id)->get();
+        
+        return view('admin.postingbarang.editdata',['data'=>$cekdata]);
+    }
 }

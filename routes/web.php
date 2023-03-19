@@ -24,4 +24,5 @@ Auth::routes(['register' => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/postinganbarang/tambah', [App\Http\Controllers\HomeController::class, 'tambahbarang']);
 Route::get('/postinganbarang/lihatdata/{id}', [App\Http\Controllers\HomeController::class, 'lihatdata']);
+Route::get('/postinganbarang/editdata/{id}', [App\Http\Controllers\HomeController::class, 'editdatabarang']);
 Route::post('/postinganbarang/posttambah', [App\Http\Controllers\HomeController::class, 'posttambahbarang']);
