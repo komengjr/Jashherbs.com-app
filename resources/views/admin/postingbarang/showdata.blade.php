@@ -5,10 +5,10 @@
     </button>
 </div>
 <div class="modal-body">
-    <div class="">
+    <div class="card">
         <img class="card-img-top" src="{{ url($data[0]->file_barang, []) }}" alt="Card image cap" />
         <div class="card-body">
-          <h5 class="card-title">{{$data[0]->nama_item}}</h5>
+          <h5 class="card-title">Card Sample Title</h5>
           <p class="card-text">
             @php
                 echo $data[0]->deskripsi_item;
@@ -21,9 +21,9 @@
       </div>
     
 </div>
-{{-- <div class="modal-footer">
-    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i>
-        Close</button>
-    <button type="button" class="btn btn-success"><i class="fa fa-check-square-o"></i> Save
-        changes</button>
-</div> --}}
+<div class="modal-footer">
+    <button type="button" class="btn-danger" data-dismiss="modal"><i class="fa fa-times"></i>
+        Tutup</button>
+    {{-- <button type="button" class="btn btn-success"><i class="fa fa-check-square-o"></i> Save
+        changes</button> --}}
+</div>
