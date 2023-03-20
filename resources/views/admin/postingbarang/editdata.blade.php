@@ -4,7 +4,9 @@
     <button type="button" class=" btn-danger" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-a
+<body>
+    asd
+</body>
 </div>
     <div class="card-body">
         <form class="row" method="POST" action="{{ url('postinganbarang/posttambah', []) }}" enctype="multipart/form-data">
