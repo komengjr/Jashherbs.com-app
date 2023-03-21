@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+                    <div class="hero__item set-bg" data-setbg="img/hero/ban.jpg">
                         <div class="hero__text" style="color: aliceblue;">
                             <span>JASH HERBS ORGANIC</span>
                             <h3 style="color: aliceblue;">WE PROVIDE HERBAL AND SPICE PRODUCTS THAT ARE PROCESSED NATURALLY BY OUR TRAINED AND EXPERIENCE FARMERS.</h3>
@@ -68,8 +68,8 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">Kratom Crumbs</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/categories/ta.jpg">
+                            <h5><a href="#">Tongkat Ali</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -126,7 +126,7 @@
                         </div>
                         <div class="featured__item__text">
                             <h6><a href="#">{{$item->nama_item}}</a></h6>
-                            <h5>@money($item->harga_item)</h5>
+                            <h5>@currency($item->harga_item)</h5>
                         </div>
                     </div>
                 </div>
@@ -141,14 +141,31 @@
     <div class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="banner__pic">
-                        <img src="img/banner/banner-1.jpg" alt="">
+                        <video controls poster="{{ url('img/banner/1.jpg', []) }}"-->>
+                            {{-- <source src="https://www.youtube.com/watch?v=aARyxcwPwyE" type="video/mp4">  --}}
+                            <source src="{{ url('media/1.mp4', []) }}" type="video/ogg">
+                            {{-- <track default kind="subtitles" label="English" src="captions.vtt" srclang="en"> --}}
+                        </video>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="banner__pic">
-                        <img src="img/banner/banner-2.jpg" alt="">
+                        <video controls poster="{{ url('img/banner/1.jpg', []) }}"-->>
+                            {{-- <source src="https://www.youtube.com/watch?v=aARyxcwPwyE" type="video/mp4">  --}}
+                            <source src="{{ url('media/4.mp4', []) }}" type="video/ogg">
+                            {{-- <track default kind="subtitles" label="English" src="captions.vtt" srclang="en"> --}}
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="banner__pic">
+                        <video controls poster="{{ url('img/banner/1.jpg', []) }}"-->>
+                            {{-- <source src="https://www.youtube.com/watch?v=aARyxcwPwyE" type="video/mp4">  --}}
+                            <source src="{{ url('media/5.mp4', []) }}" type="video/ogg">
+                            {{-- <track default kind="subtitles" label="English" src="captions.vtt" srclang="en"> --}}
+                        </video>
                     </div>
                 </div>
             </div>
@@ -157,7 +174,7 @@
     <!-- Banner End -->
 
     <!-- Latest Product Section Begin -->
-    <section class="latest-product spad">
+    {{-- <section class="latest-product spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
@@ -357,7 +374,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Latest Product Section End -->
 
     <!-- Blog Section Begin -->

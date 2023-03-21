@@ -31,8 +31,9 @@ class HomeController extends Controller
         ]);
     }
     public function tambahbarang()
-    {
-        return view('admin.tambahpostinganbarang');
+    {  
+        $cat = DB::table('tbl_cat')->get();
+        return view('admin.tambahpostinganbarang',['cat'=>$cat]);
     }
     public function posttambahbarang(Request $request)
     {
@@ -55,5 +56,12 @@ class HomeController extends Controller
         $cekdata = DB::table('tbl_item')->where('kd_item',$id)->get();
         
         return view('admin.postingbarang.showdata',['data'=>$cekdata]);
+    }
+    public function editdatabarang($id)
+    {
+
+        $cekdata = DB::table('tbl_item')->where('kd_item',$id)->get();
+        
+        return view('admin.postingbarang.editdata',['data'=>$cekdata]);
     }
 }

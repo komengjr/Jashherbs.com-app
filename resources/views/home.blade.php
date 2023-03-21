@@ -63,7 +63,7 @@
                                                 <td>{{ $databarang->status_item }}</td>
                                                 <td class="text-center">
                                                     <button class="btn-info" data-toggle="modal" data-target="#modal-animation-12" id="lihatdatabarang" data-url="{{ url('/postinganbarang/lihatdata', ['id'=>$databarang->kd_item]) }}"><i class="fa fa-eye"></i></button>
-                                                    <button class="btn-warning"><i class="fa fa-pencil"></i></button>
+                                                    <button class="btn-warning" data-toggle="modal" data-target="#modal-animation-12" id="editdatabarang" data-url="{{ url('/postinganbarang/editdata', ['id'=>$databarang->kd_item]) }}"><i class="fa fa-pencil"></i></button>
                                                     <button class="btn-danger"><i class="fa fa-trash"></i></button>
                                                 </td>
                                             </tr>
@@ -117,7 +117,7 @@
 
 
     <div class="modal fade" id="modal-animation-12">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content animated jackInTheBox">
                <div id="postinganbarang"></div>
             </div>

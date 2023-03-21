@@ -7,7 +7,7 @@
             @csrf
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Nama Barang</label>
-                <input type="text" name="nama_barang" class="form-control" autofocus>
+                <input type="text" name="nama_barang" class="form-control" autofocus >
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Harga Barang</label>
@@ -15,7 +15,12 @@
             </div>
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Kategori Barang</label>
-                <input type="text" name="kategori_barang" class="form-control"  autofocus>
+                <select name="kategori_barang" id="" class="form-control">
+                    <option value="">Pilih Kategori</option>
+                    @foreach ($cat as $cat)
+                        <option value="{{$cat->kd_cat}}">{{$cat->nama_cat}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="col-md-6">
                 <label for="inputPassword4" class="form-label">Gambar Barang</label>
