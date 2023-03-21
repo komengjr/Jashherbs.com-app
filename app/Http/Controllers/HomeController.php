@@ -31,7 +31,7 @@ class HomeController extends Controller
         ]);
     }
     public function tambahbarang()
-    {  
+    {
         $cat = DB::table('tbl_cat')->get();
         return view('admin.tambahpostinganbarang',['cat'=>$cat]);
     }
@@ -45,7 +45,7 @@ class HomeController extends Controller
                 'nama_item' => $request->input('nama_barang'),
                 'harga_item' => $request->input('harga_barang'),
                 'deskripsi_item' => $request->input('deskripsi_barang'),
-                'file_barang' => $request->file('gambar_barang')->storeAs('data_file/fileuploaditem/'.$request->input('nama_barang'),Str::random(10).'postbarang.jpg'),
+                'file_barang' => $request->file('gambar_barang')->storeAs('data_file/fileuploaditem/'.$kd_item,Str::random(10).'postbarang.jpg'),
                 'status_item' => 1,
                 'created_at' => date('Y-m-d H:i:s'),
             ]);
@@ -54,14 +54,14 @@ class HomeController extends Controller
     public function lihatdata($id)
     {
         $cekdata = DB::table('tbl_item')->where('kd_item',$id)->get();
-        
+
         return view('admin.postingbarang.showdata',['data'=>$cekdata]);
     }
     public function editdatabarang($id)
     {
 
         $cekdata = DB::table('tbl_item')->where('kd_item',$id)->get();
-        
+
         return view('admin.postingbarang.editdata',['data'=>$cekdata]);
     }
 }
